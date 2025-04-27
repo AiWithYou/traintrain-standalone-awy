@@ -63,9 +63,9 @@ def check_python_version():
     micro = sys.version_info.micro
 
     if is_windows:
-        supported_minors = [10]
+        supported_minors = [10, 11, 12]       # Python 3.10～3.12 を許可
     else:
-        supported_minors = [7, 8, 9, 10, 11]
+        supported_minors = [10, 11, 12]       # Linux/mac も 3.10～3.12 に拡張
 
     if not (major == 3 and minor in supported_minors):
         print_error_explanation(f"""
@@ -259,7 +259,7 @@ def prepare_environment():
     if not is_installed("ngrok") and args.ngrok:
         run_pip("install ngrok", "ngrok")
         
-    git_clone(tt_repo, os.path.join(script_path, "traintrain"), "traintrain", tt_branch, pull=True)
+    git_clone(tt_repo, os.path.join(script_path, "traintrain"), "traintrain", tt_branch)
     if not args.disable_update:
         git_pull("traintrain")
 
