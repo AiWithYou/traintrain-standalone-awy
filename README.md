@@ -1,3 +1,11 @@
+## Overview-awy
+自分の環境だとモデル指定などがエラーとなっていたので修正、中のtraintrainも変えてます
+
+```
+git clone https://github.com/AiWithYou/traintrain-standalone-awy
+```
+以下元のフォーク元の記述
+
 # Traintrain Standalone
 　Text-to-Image Low Rank Adaption (LoRA) training tool. Stand alone environment for sd-webui-traintrain.  
 　Stable Diffusion WebUI用のLoRA学習拡張であるsd-webui-traintrainをスタンドアロンで使用するための環境を構築します。
