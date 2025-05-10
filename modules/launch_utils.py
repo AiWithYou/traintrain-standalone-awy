@@ -192,7 +192,7 @@ re_requirement = re.compile(r"\s*([-_a-zA-Z0-9]+)\s*(?:==\s*([-+_.a-zA-Z0-9]+))?
 
 
 def prepare_environment():
-    tt_repo = "https://github.com/hako-mikan/sd-webui-traintrain.git"
+    tt_repo = "https://github.com/AiWithYou/sd-webui-traintrain-awy.git"
     tt_branch = args.branch
     torch_index_url = os.environ.get('TORCH_INDEX_URL', "https://download.pytorch.org/whl/cu121")
     torch_command = os.environ.get('TORCH_COMMAND', f"pip install torch==2.3.1 torchvision==0.18.1 --extra-index-url {torch_index_url}")
